@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    padding: 10px 20px;
+    overflow: hidden;
+    background-image: url(images/back-image.png);
+    position: relative;
+}
+.nav-menu{
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    margin-left: 60px;
+    width: 140px;
+}
+.nav-menu ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px 15px;
+}
+.nav-menu ul li a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+}
+.login-btn{
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    margin-right: 15px;
+}
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 40px;
+    color: #fff;
+    background-image: linear-gradient(45deg,#e51062,#c430d7);
+    font-size: 14px;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    transition: 0.4s;
+}
+.content{
+    margin-left: 60px;
+    margin-top: 10%;
+    max-width: 600px;
+}
+.content h1{
+    color: #222;
+    font-size: 70px;
+}
+.content p{
+    margin: 10px 0 30px;
+    color: #333;
+    animation-delay: 0.5s;
+}
+.content .btn{
+    padding: 15px 80px;
+    font-size: 16px;
+    animation-delay: 1s;
+    
+}
+.btn:hover{
+    border-top-right-radius: 30px;
+}
+.feature-img{
+    position: absolute;
+    width: 530px;
+    right: 10%;
+    bottom: 0;
+    height: 90%;
+}
+.feature-img.anim{
+    animation-delay: 1.5s;
+}
+.anim{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+.login-div2{
+    display: none;
+}
+@keyframes moveup{
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+/* media queries */
+@media (max-width:600px){
+    .feature-img{
+        display: none;
+    }
+    .nav-menu{
+        padding:0;
+        margin-top: 0;
+    }
+    .logo{
+        width: 100px;
+        margin-right: 30px;
+        margin-left: 20px;
+    }
+    .nav-menu ul li{
+        list-style: none;
+        display: inline-block;
+        margin: 8px 4px;
+    }
+    .login-div{
+        display: none;
+    }
+    .login-div2{
+        display: inline-block;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+        margin-left:100px;
+    }
+}
